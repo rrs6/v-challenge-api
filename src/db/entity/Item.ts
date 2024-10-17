@@ -7,4 +7,13 @@ export class Item {
 
   @Column()
   name: string;
+
+  @Column()
+  quantity: number;
+
+  @Column()
+  quantityType: string;
+
+  @Column()
+  category: number;
 }
