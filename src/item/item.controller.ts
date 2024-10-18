@@ -8,6 +8,7 @@ export class ItemController {
     constructor(private readonly itemService: ItemService){ }
 
     @Post('/new')
-    createTask(@Body() item: ItemDTO) {
+    async createItem(@Body() item: ItemDTO) {
+        return await this.itemService.createItem(item);
     }
 }

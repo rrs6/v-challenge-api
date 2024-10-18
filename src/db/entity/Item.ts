@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
-@Entity()
+@Entity({name: 'item'})
 export class Item {
   @PrimaryGeneratedColumn()
   id: number;
@@ -16,4 +16,7 @@ export class Item {
 
   @Column()
   category: number;
+
+  @Column()
+  complete: Boolean;
 }

@@ -4,4 +4,5 @@ export interface ItemDTO {
     quantity: number;
     quantityType: string;
     category: number;
+    complete?: Boolean;
 }

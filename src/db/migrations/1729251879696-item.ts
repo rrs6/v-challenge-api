@@ -31,6 +31,11 @@ export class Item1729251879696 implements MigrationInterface {
                 name: 'category',
                 type: 'int',
                 isNullable: false
+            },
+            {
+                name: 'complete',
+                type: 'boolean',
+                default: false,
             }
             ]
         }))
