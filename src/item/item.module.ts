@@ -4,6 +4,7 @@ import { ItemService } from './item.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Item } from 'src/db/entity/Item';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { DataSourceFactory } from 'src/db/datasource';
 
 @Module({
     imports: [TypeOrmModule.forRootAsync({
