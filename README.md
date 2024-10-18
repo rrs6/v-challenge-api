@@ -87,3 +87,6 @@ Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 
 Run Migrations
 npx ts-node -r tsconfig-paths/register ./node_modules/.bin/typeorm migration:run -d ./src/db/datasource.ts
+
+Revert Migrations
+npx ts-node -r tsconfig-paths/register ./node_modules/.bin/typeorm migration:revert -d ./src/db/datasource.ts

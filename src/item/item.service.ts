@@ -9,4 +9,12 @@ export class ItemService {
     async createItem(item: ItemDTO) {
         return await this.itemRepo.createItem(item);
     }
+
+    async getItens(page: number) {
+        return await this.itemRepo.getItens(page);
+    }
+
+    async changeItem(item: ItemDTO, id: number) {
+        return await this.itemRepo.changeItem(item, id);
+    }
 }

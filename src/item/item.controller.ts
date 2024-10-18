@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { ItemService } from './item.service';
 import { ItemDTO } from './item.dto';
 
@@ -10,5 +10,15 @@ export class ItemController {
     @Post('/new')
     async createItem(@Body() item: ItemDTO) {
         return await this.itemService.createItem(item);
+    }
+
+    @Get()
+    async getItems(@Query() query: any) {
+        return await this.itemService.getItens(query.page);
+    }
+
+    @Put(':id')
+    async changeItem(@Body() item: ItemDTO, @Param('id') id: number) {
+        return await this.itemService.changeItem(item, id);
     }
 }
