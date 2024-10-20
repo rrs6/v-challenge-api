@@ -15,7 +15,7 @@ export class Item {
   quantityType: string;
 
   @Column()
-  category: number;
+  category: string;
 
   @Column()
   complete: Boolean;

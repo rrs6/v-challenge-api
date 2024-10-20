@@ -10,7 +10,7 @@ export class Item1729251879696 implements MigrationInterface {
                 type: 'int',
                 isPrimary: true,
                 isGenerated: true,
-                generationStrategy: 'rowid'
+                generationStrategy: 'identity'
             },
             {
                 name: 'name',
@@ -29,7 +29,7 @@ export class Item1729251879696 implements MigrationInterface {
             },
             {
                 name: 'category',
-                type: 'int',
+                type: 'varchar',
                 isNullable: false
             },
             {

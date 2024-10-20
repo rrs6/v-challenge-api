@@ -17,8 +17,8 @@ export class ItemRepository {
 
     async getItens(page: number) {
         const totalItems = await this.itemRepo.count();
-        const totalPages = Math.ceil(totalItems / 10);
-        const items = await this.itemRepo.find({ skip: (page - 1) * 10, take: 10 });
+        const totalPages = Math.ceil(totalItems / 5);
+        const items = await this.itemRepo.find({ skip: (page - 1) * 5, take: 5 });
         return {items,totalPages};
     }
 

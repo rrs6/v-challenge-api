@@ -3,6 +3,6 @@ export interface ItemDTO {
     name: string;
     quantity: number;
     quantityType: string;
-    category: number;
+    category: string;
     complete?: Boolean;
 }
